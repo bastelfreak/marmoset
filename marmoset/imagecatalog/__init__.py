@@ -11,6 +11,11 @@ def list_all(args):
     for image_metadata in metadata_list:
         print_metadata(image_metadata)
 
+def get_image(args):
+    """Get Metadata for a single image"""
+    catalog = ImageCatalog
+    metadata = catalog.get_image_path(args.filename)
+    print_metadata(metadata)
 
 def print_metadata(metadata_dict):
     """Print the image's metadata dict."""
